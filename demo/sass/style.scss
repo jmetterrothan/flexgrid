@@ -1,0 +1,37 @@
+@import '../../flexgrid/flexgrid.scss';
+@import "https://fonts.googleapis.com/css?family=Roboto:400,700";
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size:15px;
+    background:#f1f1f1;
+}
+
+.wrapper{
+  width:80%;
+  margin:32px 10%;
+}
+
+.col{
+  color:#062e31;
+  position:relative;
+  .content{
+    display:block;
+    min-height:200px;
+    padding:16px;
+    margin-bottom:16px;
+    width:100%;
+    z-index:0;
+    background-color:#97C0B7;
+
+    &.content--big{
+      min-height:416px;
+    }
+  }
+}
+.col .col .content{
+  background-color:#679693;
+}
+.col .col .col .content{
+  background-color:#41848F;
+}
