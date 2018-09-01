@@ -1,9 +1,11 @@
 # flexgrid
 A lightweight responsive grid.
 
-`npm install jmetterrothan-flexgrid`
+## Usage
 
-## Make it your own
+```
+npm install jmetterrothan-flexgrid
+```
 
 You can overwrite any of the following variables and create your own grid.
 
@@ -15,7 +17,7 @@ $flexgrid-breakpoint-desktop: 1200px;
 $flexgrid-nbcols: 24;
 $flexgrid-gutter: 16px;
 
-@import 'flexgrid/src/assets/sass/index';
+@import 'jmetterrothan-flexgrid/src/assets/sass/index';
 ```
 
 ## Using the grid :
