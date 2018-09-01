@@ -38,3 +38,9 @@ html{
 .col .col .col .content {
 	background-color: #41848F;
 }
+
+@include tablet-only {
+	.col {
+		color: red;
+	}
+}
