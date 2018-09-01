@@ -1,0 +1,13 @@
+{
+  "name": "flexgrid",
+  "version": "1.0.0",
+  "description": "A lightweight SASS grid system",
+  "main": "index.js",
+  "repository": "https://github.com/metterrothan/flexgrid.git",
+  "author": "Jérémie Metter-Rothan",
+  "license": "MIT",
+  "dependencies": {
+    "reset-css": "^4.0.1"
+  },
+  "devDependencies": {}
+}
