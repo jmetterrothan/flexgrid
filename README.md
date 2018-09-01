@@ -1,6 +1,8 @@
 # flexgrid
 A lightweight responsive grid.
 
+`npm install jmetterrothan-flexgrid`
+
 ## Make it your own
 
 You can overwrite any of the following variables and create your own grid.
