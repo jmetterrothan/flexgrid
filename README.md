@@ -54,14 +54,14 @@ In the following example we have a 24 column grid, hence by specifying the class
 
 ```html
 <div class="flexgrid">
-  <div class="col col_12-t">
+  <div class="col col_12">
     <div class="flexgrid">
       <div class="col col_8"></div>
       <div class="col col_8"></div>
       <div class="col col_8"></div>
     </div>
   </div>
-  <div class="col col_12-t">
+  <div class="col col_12">
     ...
   </div>
 </div>
