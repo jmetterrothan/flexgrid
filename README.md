@@ -31,7 +31,6 @@ In the following example we have a 24 column grid, hence by specifying the class
 <div class="flexgrid">
   <div class="col col_12"></div>
   <div class="col col_12"></div>
-  ...
 </div>
  ```
   
@@ -50,6 +49,24 @@ In the following example we have a 24 column grid, hence by specifying the class
  ```
 
 > col_{NB_OF_COLUMNS}-{BREAKPOINT}
+
+**Example 3 : nested grids**
+
+```html
+<div class="flexgrid">
+  <div class="col col_12-t">
+    <div class="flexgrid">
+      <div class="col col_8"></div>
+      <div class="col col_8"></div>
+      <div class="col col_8"></div>
+    </div>
+  </div>
+  <div class="col col_12-t">
+    ...
+  </div>
+</div>
+ ```
+ > Gutters are respected even in deep nested grids
 
 ## Available breakpoint mixins and associated suffix
 
