@@ -6,8 +6,6 @@
   "repository": "https://github.com/metterrothan/flexgrid.git",
   "author": "Jérémie Metter-Rothan",
   "license": "MIT",
-  "dependencies": {
-    "reset-css": "^4.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {}
 }
