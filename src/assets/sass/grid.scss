@@ -1,7 +1,10 @@
+@import 'vars';
+@import 'breakpoints';
+
 // columns mixin
 @mixin col($name: '') {
     @for $i from 1 through $flexgrid-nbcols {
-        &.col__#{$i}#{$name} {
+        &.col_#{$i}#{$name} {
             flex-basis: 100% / $flexgrid-nbcols * $i;
             max-width: 100% / $flexgrid-nbcols * $i;
         }
@@ -9,17 +12,30 @@
 }
 
 // grid
-.grid {
+.#{$flexgrid-prefix}flexgrid {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    &:not(.nogutter) {
-        width: calc(100% + #{$flexgrid-gutter});
-        margin: 0 -#{$flexgrid-gutter / 2};
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+    }
+
+    width: calc(100% + #{$flexgrid-gutter});
+    margin: 0 -#{$flexgrid-gutter / 2};
+
+    .col {
+        padding: 0 #{$flexgrid-gutter / 2};
+    }
+
+    &_nogutter {
+        width: 100%;
+        margin: 0;
 
         .col {
-            padding: 0 #{$flexgrid-gutter / 2};
+            padding: 0;
         }
     }
 
@@ -31,55 +47,55 @@
         @include col;
 
         @include mobile-only {
-            @include col('_m-o');
+            @include col('-m-o');
         }
 
         @include mobile-portrait-only {
-            @include col('_mp-o');
+            @include col('-mp-o');
         }
 
         @include mobile-landscape-only {
-            @include col('_ml-o');
+            @include col('-ml-o');
         }
 
         @include breakpoint-tablet {
-            @include col('_t');
+            @include col('-t');
         }
 
         @include tablet-only {
-            @include col('_t-o');
+            @include col('-t-o');
         }
 
         @include breakpoint-tablet-portrait {
-            @include col('_tp');
+            @include col('-tp');
         }
 
         @include tablet-portrait-only {
-            @include col('_tp-o');
+            @include col('-tp-o');
         }
 
         @include breakpoint-tablet-landscape {
-            @include col('_tl');
+            @include col('-tl');
         }
 
         @include tablet-landscape-only {
-            @include col('_tl-o');
+            @include col('-tl-o');
         }
 
         @include breakpoint-laptop {
-            @include col('_l');
+            @include col('-l');
         }
 
         @include laptop-only {
-            @include col('_l-o');
+            @include col('-l-o');
         }
 
         @include breakpoint-desktop {
-            @include col('_d');
+            @include col('-d');
         }
 
         @include desktop-only {
-            @include col('_d-o');
+            @include col('-d-o');
         }
     }
 

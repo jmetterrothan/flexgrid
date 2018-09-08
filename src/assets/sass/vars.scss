@@ -2,15 +2,6 @@ $flexgrid-breakpoint-tablet: 600px !default;
 $flexgrid-breakpoint-laptop: 992px !default;
 $flexgrid-breakpoint-desktop: 1200px !default;
 
+$flexgrid-prefix: '' !default;
 $flexgrid-nbcols: 24 !default;
 $flexgrid-gutter: 16px !default;
-
-@import '../node_modules/reset-css/sass/_reset.scss';
-@import 'breakpoints';
-@import 'grid';
-
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-}

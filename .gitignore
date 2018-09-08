@@ -1,3 +1,10 @@
+.DS_Store
+
 .sass-cache
 *.map
 node_modules/
+dist/
+
+demo/node_modules/
+demo/.sass-cache/
+demo/dist/
