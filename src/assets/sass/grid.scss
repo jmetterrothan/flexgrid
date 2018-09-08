@@ -1,3 +1,6 @@
+@import 'vars';
+@import 'breakpoints';
+
 // columns mixin
 @mixin col($name: '') {
     @for $i from 1 through $flexgrid-nbcols {
@@ -9,7 +12,7 @@
 }
 
 // grid
-.flexgrid {
+.#{$flexgrid-prefix}flexgrid {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -20,12 +23,19 @@
         box-sizing: border-box;
     }
 
-    &_gutter {
-        width: calc(100% + #{$flexgrid-gutter});
-        margin: 0 -#{$flexgrid-gutter / 2};
+    width: calc(100% + #{$flexgrid-gutter});
+    margin: 0 -#{$flexgrid-gutter / 2};
+
+    .col {
+        padding: 0 #{$flexgrid-gutter / 2};
+    }
+
+    &_nogutter {
+        width: 100%;
+        margin: 0;
 
         .col {
-            padding: 0 #{$flexgrid-gutter / 2};
+            padding: 0;
         }
     }
 
