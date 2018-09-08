@@ -1,5 +1,5 @@
 {
-  "name": "flexgrid",
+  "name": "jmetterrothan-flexgrid",
   "version": "1.0.0",
   "description": "A lightweight SASS grid system",
   "main": "index.js",
