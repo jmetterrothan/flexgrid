@@ -1,5 +1,5 @@
 # flexgrid
-A lightweight responsive grid.
+A lightweight responsive grid. Live demo [here](http://projects.metter-rothan.fr/flexgrid/)!
 
 ## Usage
 
@@ -8,16 +8,18 @@ npm install jmetterrothan-flexgrid
 ```
 
 You can overwrite any of the following variables and create your own grid.
+By default there is no prefix added, but you can create mutiple grids.
 
 ```sass
 $flexgrid-breakpoint-tablet: 600px;
 $flexgrid-breakpoint-laptop: 992px;
 $flexgrid-breakpoint-desktop: 1200px;
 
+$flexgrid-prefix: '';
 $flexgrid-nbcols: 24;
 $flexgrid-gutter: 16px;
 
-@import 'jmetterrothan-flexgrid/src/assets/sass/index';
+@import 'jmetterrothan-flexgrid/src/assets/sass/grid';
 ```
 
 ## Using the grid :
@@ -26,37 +28,58 @@ In the following example we have a 24 column grid, hence by specifying the class
 
 **Example 1 : basics**
 ```html
-<div class="flexgrid flexgrid_gutter">
-  <div class="col col__12"></div>
-  <div class="col col__12"></div>
+<div class="flexgrid">
+  <div class="col col_12"></div>
+  <div class="col col_12"></div>
 </div>
  ```
   
- > Note that the `flexgrid_gutter` class is required to enable grid gutters.
+ > Note that the `flexgrid_nogutter` class can be used on the grid to disable gutters.
 
 **Example 2 : adding some responsive behaviour**
 
 ```html
-<div class="flexgrid flexgrid_gutter">
-  <div class="col col__12_t col__8_l">1</div>
-  <div class="col col__12_t col__8_l">2</div>
-  <div class="col col__12_t col__8_l">3</div>
-  <div class="col col__12_t col__8_l">4</div>
+<div class="flexgrid">
+  <div class="col col_12-t col_8-l">1</div>
+  <div class="col col_12-t col_8-l">2</div>
+  <div class="col col_12-t col_8-l">3</div>
+  <div class="col col_12-t col_8-l">4</div>
+  ...
 </div>
  ```
 
-## Available breakpoint mixins
+> col_{NB_OF_COLUMNS}-{BREAKPOINT}
+
+**Example 3 : nested grids**
+
+```html
+<div class="flexgrid">
+  <div class="col col_12">
+    <div class="flexgrid">
+      <div class="col col_8"></div>
+      <div class="col col_8"></div>
+      <div class="col col_8"></div>
+    </div>
+  </div>
+  <div class="col col_12">
+    ...
+  </div>
+</div>
+ ```
+ > Gutters are respected even in deep nested grids
+
+## Available breakpoint mixins and associated suffix
 
 You can use the following breakpoint mixins :
 
-- mobile-only
-- mobile-landscape-only
-- mobile-portrait-only
-- tablet-only
-- tablet-landscape-only
-- tablet-portrait-only
-- laptop-only
-- desktop-only
+- mobile-only `m-o`
+- mobile-landscape-only `mt-o`
+- mobile-portrait-only `mp-o`
+- tablet-only `t-o`
+- tablet-landscape-only `tl-o`
+- tablet-portrait-only `tp-o`
+- laptop-only `l-o`
+- desktop-only `d-o`
 
 **Example :**
 ```sass
@@ -65,14 +88,14 @@ You can use the following breakpoint mixins :
 }
 ```
 
-- breakpoint-mobile
-- breakpoint-mobile-landscape
-- breakpoint-mobile-portrait
-- breakpoint-tablet
-- breakpoint-tablet-landscape
-- breakpoint-tablet-portrait
-- breakpoint-laptop
-- breakpoint-desktop
+- breakpoint-mobile `m`
+- breakpoint-mobile-landscape `ml`
+- breakpoint-mobile-portrait `mp`
+- breakpoint-tablet `t`
+- breakpoint-tablet-landscape `tl`
+- breakpoint-tablet-portrait `tp`
+- breakpoint-laptop `l`
+- breakpoint-desktop `d`
 
 **Example :**
 ```sass
