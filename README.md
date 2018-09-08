@@ -8,12 +8,14 @@ npm install jmetterrothan-flexgrid
 ```
 
 You can overwrite any of the following variables and create your own grid.
+By default there is no prefix added, but you can create mutiple grids.
 
 ```sass
 $flexgrid-breakpoint-tablet: 600px;
 $flexgrid-breakpoint-laptop: 992px;
 $flexgrid-breakpoint-desktop: 1200px;
 
+$flexgrid-prefix: '';
 $flexgrid-nbcols: 24;
 $flexgrid-gutter: 16px;
 
@@ -29,6 +31,7 @@ In the following example we have a 24 column grid, hence by specifying the class
 <div class="flexgrid flexgrid_gutter">
   <div class="col col__12"></div>
   <div class="col col__12"></div>
+  ...
 </div>
  ```
   
@@ -42,6 +45,7 @@ In the following example we have a 24 column grid, hence by specifying the class
   <div class="col col__12_t col__8_l">2</div>
   <div class="col col__12_t col__8_l">3</div>
   <div class="col col__12_t col__8_l">4</div>
+  ...
 </div>
  ```
 
