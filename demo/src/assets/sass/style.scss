@@ -1,0 +1,91 @@
+@import '../../../../src/assets/sass/grid';
+
+html{
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	background: #f1f1f1;
+}
+
+.header {
+    margin-bottom: 32px;
+}
+
+.footer {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    color: #505050;
+
+    a {
+        color: #505050;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.title {  
+    &_primary {
+        font-size: 32px;
+        line-height: 38px;
+        margin-top: 48px;
+        margin-bottom: 16px;
+        color: #505050;
+
+        a {
+            color: #F7715D;
+            text-decoration: none;
+    
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &_secondary {
+        font-size: 18px;
+        font-weight: 400;
+        color: #252525;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+}
+
+.paragraph {
+    font-size: 16px;
+    color: #505050;
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 1024px;
+	margin: 32px auto;
+}
+
+.col {
+	color: #505050;
+	position: relative;
+
+	.content {
+		display: block;
+        min-height: 275px;
+        border-radius: 3px;
+		padding: 16px;
+		margin-bottom: 16px;
+		width: 100%;
+		z-index: 0;
+		background-color: #dbdbdb;
+
+		&__nested {
+            min-height: calc((275px - 16px) / 2);
+            
+            @include breakpoint-laptop {
+                min-height: 275px;
+            }
+		}
+	}
+}
+.col .col .content {
+	// background-color: #F2CDC4;
+}
