@@ -24,7 +24,7 @@ $flexgrid-gutter: 16px;
 
 ## Using the grid :
 
-In the following example we have a 24 column grid, hence by specifying the class `col__12` the columns are each distributed 50% of the available width (they each take the space of 12 columns).
+In the following example we have a 24 column grid, hence by specifying the class `col_12` the columns are each distributed 50% of the available width (they each take the space of 12 columns).
 
 **Example 1 : basics**
 ```html
