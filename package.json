@@ -2,6 +2,14 @@
   "name": "jmetterrothan-flexgrid",
   "version": "1.0.0",
   "description": "A lightweight SASS grid system",
+  "keywords": [
+    "flexgrid",
+    "flexbox",
+    "grid",
+    "sass",
+    "responsive",
+    "grid-layout"
+  ],
   "main": "index.js",
   "repository": "https://github.com/metterrothan/flexgrid.git",
   "author": "Jérémie Metter-Rothan",
