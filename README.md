@@ -19,7 +19,7 @@ $flexgrid-prefix: '';
 $flexgrid-nbcols: 24;
 $flexgrid-gutter: 16px;
 
-@import 'jmetterrothan-flexgrid/src/assets/sass/grid';
+@import '~jmetterrothan-flexgrid/src/assets/sass/grid';
 ```
 
 ## Using the grid :
