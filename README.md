@@ -1,5 +1,5 @@
 # flexgrid
-A lightweight responsive grid. Live demo [here](http://projects.metter-rothan.fr/flexgrid/)!
+A lightweight responsive grid. Live demo [here](https://goo.gl/tF2XUo)!
 
 ## Usage
 
