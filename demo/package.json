@@ -7,7 +7,7 @@
   "author": "Jérémie Metter-Rothan",
   "license": "MIT",
   "dependencies": {
-    "jmetterrothan-flexgrid": "^1.0.1"
+    "jmetterrothan-flexgrid": "^1.1.0"
   },
   "devDependencies": {
     "css-loader": "^1.0.0",
@@ -21,6 +21,6 @@
     "webpack-dev-server": "^3.1.8"
   },
   "scripts": {
-    "start:dev": "webpack-dev-server --mode=development --watch"
+    "dev": "webpack-dev-server --mode=development --watch --port 9000"
   }
 }

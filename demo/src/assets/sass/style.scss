@@ -63,7 +63,7 @@ html{
 	margin: 32px auto;
 }
 
-.col {
+.flexcol {
 	color: #505050;
 	position: relative;
 
@@ -77,7 +77,7 @@ html{
 		z-index: 0;
 		background-color: #dbdbdb;
 
-		&__nested {
+		&--nested {
             min-height: calc((275px - 16px) / 2);
             
             @include breakpoint-laptop {
@@ -86,6 +86,6 @@ html{
 		}
 	}
 }
-.col .col .content {
+.flexcol .flexcol .content {
 	// background-color: #F2CDC4;
 }
