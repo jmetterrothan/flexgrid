@@ -16,6 +16,7 @@ $flexgrid-breakpoint-laptop: 992px;
 $flexgrid-breakpoint-desktop: 1200px;
 
 $flexgrid-prefix: '';
+$flexgrid-suffix: '';
 $flexgrid-nbcols: 24;
 $flexgrid-gutter: 16px;
 
@@ -24,26 +25,26 @@ $flexgrid-gutter: 16px;
 
 ## Using the grid :
 
-In the following example we have a 24 column grid, hence by specifying the class `col_12` the columns are each distributed 50% of the available width (they each take the space of 12 columns).
+In the following example we have a 24 column grid, hence by specifying the class `flexcol--12` the columns are each distributed 50% of the available width (they each take the space of 12 columns).
 
 **Example 1 : basics**
 ```html
-<div class="flexgrid">
-  <div class="col col_12"></div>
-  <div class="col col_12"></div>
+<div class="flexrow">
+  <div class="flexcol flexcol--12"></div>
+  <div class="flexcol flexcol--12"></div>
 </div>
  ```
   
- > Note that the `flexgrid_nogutter` class can be used on the grid to disable gutters.
+ > Note that the `flexrow--nogutter` class can be used on the grid to disable gutters.
 
 **Example 2 : adding some responsive behaviour**
 
 ```html
-<div class="flexgrid">
-  <div class="col col_12-t col_8-l">1</div>
-  <div class="col col_12-t col_8-l">2</div>
-  <div class="col col_12-t col_8-l">3</div>
-  <div class="col col_12-t col_8-l">4</div>
+<div class="flexrow">
+  <div class="flexcol flexcol--12-t flexcol--8-l">1</div>
+  <div class="flexcol flexcol--12-t flexcol--8-l">2</div>
+  <div class="flexcol flexcol--12-t flexcol--8-l">3</div>
+  <div class="flexcol flexcol--12-t flexcol--8-l">4</div>
   ...
 </div>
  ```
@@ -53,15 +54,15 @@ In the following example we have a 24 column grid, hence by specifying the class
 **Example 3 : nested grids**
 
 ```html
-<div class="flexgrid">
-  <div class="col col_12">
-    <div class="flexgrid">
-      <div class="col col_8"></div>
-      <div class="col col_8"></div>
-      <div class="col col_8"></div>
+<div class="flexrow">
+  <div class="flexcol flexcol--12">
+    <div class="flexrow">
+      <div class="flexcol flexcol--8"></div>
+      <div class="flexcol flexcol--8"></div>
+      <div class="flexcol flexcol--8"></div>
     </div>
   </div>
-  <div class="col col_12">
+  <div class="flexcol flexcol--12">
     ...
   </div>
 </div>

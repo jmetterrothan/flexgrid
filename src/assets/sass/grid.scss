@@ -4,7 +4,7 @@
 // columns mixin
 @mixin col($name: '') {
     @for $i from 1 through $flexgrid-nbcols {
-        &.col_#{$i}#{$name} {
+        &.flexcol--#{$i}#{$name} {
             flex-basis: 100% / $flexgrid-nbcols * $i;
             max-width: 100% / $flexgrid-nbcols * $i;
         }
@@ -12,10 +12,12 @@
 }
 
 // grid
-.#{$flexgrid-prefix}flexgrid {
+.#{$flexgrid-prefix}flexrow#{$flexgrid-suffix} {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    width: calc(100% + #{$flexgrid-gutter});
+    margin: 0 -#{$flexgrid-gutter / 2};
 
     *,
     *::after,
@@ -23,23 +25,17 @@
         box-sizing: border-box;
     }
 
-    width: calc(100% + #{$flexgrid-gutter});
-    margin: 0 -#{$flexgrid-gutter / 2};
-
-    .col {
-        padding: 0 #{$flexgrid-gutter / 2};
-    }
-
-    &_nogutter {
+    &--nogutter {
         width: 100%;
         margin: 0;
 
-        .col {
+        .flexcol {
             padding: 0;
         }
     }
 
-    .col {
+    .flexcol {
+        padding: 0 #{$flexgrid-gutter / 2};
         flex: 1;
         flex-basis: 100%;
         max-width: 100%;
